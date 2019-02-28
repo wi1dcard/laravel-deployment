@@ -1,0 +1,35 @@
+language: php
+
+php:
+  - "7.2"
+
+git:
+  depth: 1
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+addons:
+  apt:
+    update: true
+
+install:
+  - sudo apt install realpath
+  - composer global require wi1dcard/learnku-deploy-bot:dev-master
+
+before_script:
+  # Tests
+  - helpers/lint
+  - learnku-deploy-bot
+
+script:
+  - exit 0
+
+notifications:
+  email:
+    on_success: never # default: change
+    on_failure: always # default: always

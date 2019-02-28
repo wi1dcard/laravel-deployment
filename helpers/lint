@@ -1,5 +1,5 @@
-#!/usr/bin/env bash -eu
+#!/bin/bash -eu
 
-dir="$(dirname $0)/../"
+dir="$(realpath $(dirname $0)/../)"
 
-lint-md -c "$dir/lint-md.json" $dir/../src/*.md
+docker run --rm -v $dir:/data yuque/lint-md lint-md -c /data/lint-md.json /data/src
