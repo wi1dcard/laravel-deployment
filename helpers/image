@@ -1,0 +1,12 @@
+#!/bin/bash -eu
+
+dir=$(realpath $(dirname $0)/../)
+tmp_file=$(mktemp)
+
+pngpaste $tmp_file
+
+hash=$(md5 < $tmp_file)
+img="./images/$hash.png"
+
+mv $tmp_file "$dir/src/$img"
+echo "![]($img)" | tee >(pbcopy)

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash -eu
+
+dir="$(dirname $0)/../"
+
+lint-md -c "$dir/lint-md.json" $dir/../src/*.md
