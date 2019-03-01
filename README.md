@@ -48,6 +48,8 @@
 $ echo "Hello deployment!"
 ```
 
+在复制或输入时，请去掉开头的 `$`。
+
 在本课程中，将使用以下命令创建一个示例应用作为演示项目：
 
 ```bash
@@ -60,6 +62,7 @@ $ laravel new hello-deployment
 
 - 更新节奏：不固定，业余时间写作。暂时计划 1-2 天每篇。
 - 本课程将不再赘述云服务购买等 **基础且具备商业支持** 的步骤，如有疑问可参考 [本文](https://wi1dcard.cn/posts/cloud-infrastructures)。
+- 对于 MySQL、Redis、ElasticSearch 等组件的安装与调优不在本课程的大纲范围内，建议使用现成的云服务。
 
 ## 贡献
 
