@@ -6,7 +6,7 @@ tmp_file=$(mktemp)
 pngpaste $tmp_file
 
 hash=$(md5 < $tmp_file)
-img="./images/$hash.png"
+uri="src/images/$hash.png"
 
-mv $tmp_file "$dir/src/$img"
-echo "![]($img)" | tee >(pbcopy)
+mv $tmp_file "$dir/$uri"
+echo "![](https://github.com/wi1dcard/blog/raw/master/$uri)" | tee >(pbcopy)
