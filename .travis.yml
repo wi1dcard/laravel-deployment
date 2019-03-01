@@ -17,6 +17,9 @@ addons:
   apt:
     update: true
 
+before_install:
+  export PATH=$PATH:/home/travis/.config/composer/vendor/bin
+
 install:
   - sudo apt install realpath
   - composer global require wi1dcard/learnku-deploy-bot:dev-master
