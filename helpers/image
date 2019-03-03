@@ -9,4 +9,4 @@ hash=$(md5 < $tmp_file)
 uri="src/images/$hash.png"
 
 mv $tmp_file "$dir/$uri"
-echo "![](https://github.com/wi1dcard/blog/raw/master/$uri)" | tee >(pbcopy)
+echo "![](https://github.com/wi1dcard/laravel-deployment/raw/master/$uri)" | tee >(pbcopy)
