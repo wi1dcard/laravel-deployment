@@ -1,0 +1,43 @@
+#!/bin/bash -euo pipefail
+
+intro='> 本系列持续更新中，欢迎关注。:clap:
+>
+> 原文仓库：<https://github.com/wi1dcard/laravel-deployment>
+
+'
+
+leads='轻松部署 Laravel 应用 | '
+
+deploy() {
+    while read file
+    do
+        echo
+
+        title="$(echo "$file" | sed -E 's/.+\/(.+)\..+/\1/')"
+        echo "Processing: $title"
+
+        id="$(echo "$articles" | grep "$title" | cut -f1)"
+        echo "Article ID: $id"
+
+        contents="$(sed -E 's/^# .+$//' "$file")"
+        title="${leads}《${title}》"
+
+        echo "Updating: $title"
+        echo "${intro} ${contents}" \
+            | learnku-deploy-bot article:update -k "$LEARNKU_COOKIES" \
+                -t "$token" \
+                -i "$id" \
+                -l "$title"
+
+    done
+}
+
+learnku-deploy-bot session -k "$LEARNKU_COOKIES"
+
+token=$(learnku-deploy-bot token -k "$LEARNKU_COOKIES")
+echo "Generated CSRF token: $token"
+
+articles=$(learnku-deploy-bot article:list -k "$LEARNKU_COOKIES")
+echo -e "Fetched articles: \n$articles"
+
+find $(realpath $(dirname $0)/../src/) -name "*.md" | sort | deploy
