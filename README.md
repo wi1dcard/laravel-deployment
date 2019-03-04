@@ -3,8 +3,9 @@
 [![](https://travis-ci.com/wi1dcard/laravel-deployment.svg?branch=master)](https://travis-ci.com/wi1dcard/laravel-deployment)
 [![](https://img.shields.io/github/stars/wi1dcard/laravel-deployment.svg)](https://github.com/wi1dcard/laravel-deployment)
 
-开始阅读：[![](https://img.shields.io/badge/Available%20on-Laravel--China-brightgreen.svg)](https://learnku.com/blog/wi1dcard)
-[![](https://img.shields.io/badge/Available%20on-GitHub-brightgreen.svg)](https://github.com/wi1dcard/laravel-deployment/tree/master/src)
+## 如何阅读
+
+你可以在 [![](https://img.shields.io/badge/Available%20on-Laravel--China-brightgreen.svg)](https://learnku.com/blog/wi1dcard) 查看我的博客，亦可 [![](https://img.shields.io/badge/Available%20on-GitHub-brightgreen.svg)](https://github.com/wi1dcard/laravel-deployment/tree/master/src) 阅读源代码。
 
 ## 简介
 
@@ -26,7 +27,7 @@
 
 同时，我将尝试多种部署方式。在这个过程中，你将感受到不同方案带来的优势，同时也不可避免地存在一些缺点，希望大家能够结合自身情况和实际需求，记住 **适合即最优**。
 
-## 主要知识点
+## 知识点
 
 上线 Laravel 项目，在技术层面基本可以分为三大步骤：
 
@@ -45,6 +46,23 @@
 - Terraform
 - Lexicon
 - ...
+
+## 目录结构
+
+```
+.
+├── README.md --------- 导语
+├── helpers ----------- 辅助脚本目录（无需关注）
+│   ├── deploy
+│   ├── image
+│   └── lint
+└── src --------------- 实际课程目录
+    ├── *.md ---------- Markdown 格式的文章
+    ├── ...
+    └── images -------- 图片目录
+        ├── *.png ----- 截图、插图等
+        └── ...
+```
 
 ## 约定
 

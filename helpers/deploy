@@ -4,6 +4,9 @@ intro='> 本系列持续更新中，欢迎关注。:clap:
 >
 > 原文仓库：<https://github.com/wi1dcard/laravel-deployment>
 
+> 由于课程上下文关联比较紧密，在开始前请先阅读 [本文](https://learnku.com/articles/24914)。
+
+<!--more-->
 '
 
 leads='轻松部署 Laravel 应用 | '
