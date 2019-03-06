@@ -1,5 +1,7 @@
 #!/bin/bash -euo pipefail
 
+local_cookies='/Projects/learnku-deploy-bot/build/cookies.txt'
+
 intro='> 本系列持续更新中，欢迎关注。:clap:
 >
 > 原文仓库：<https://github.com/wi1dcard/laravel-deployment>
@@ -27,7 +29,7 @@ deploy() {
 
         echo "Updating: $title"
         echo "${intro} ${contents}" \
-            | learnku-deploy-bot article:update -k "$LEARNKU_COOKIES" \
+            | learnku-deploy-bot article:update -k "$cookies" \
                 -t "$token" \
                 -i "$id" \
                 -l "$title"
@@ -35,12 +37,14 @@ deploy() {
     done
 }
 
-learnku-deploy-bot session -k "$LEARNKU_COOKIES"
+persistent_cookies=$([ -z ${LEARNKU_COOKIES+x} ] && cat "$local_cookies" || echo "$LEARNKU_COOKIES" )
+cookies=$(learnku-deploy-bot session -k "$persistent_cookies" -r)
+echo "Cookies refreshed."
 
-token=$(learnku-deploy-bot token -k "$LEARNKU_COOKIES")
+token=$(learnku-deploy-bot token -k "$cookies")
 echo "Generated CSRF token: $token"
 
-articles=$(learnku-deploy-bot article:list -k "$LEARNKU_COOKIES")
+articles=$(learnku-deploy-bot article:list -k "$cookies")
 echo -e "Fetched articles: \n$articles"
 
 find $(realpath $(dirname $0)/../src/) -name "*.md" | sort | deploy
