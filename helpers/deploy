@@ -2,11 +2,13 @@
 
 local_cookies='/Projects/learnku-deploy-bot/build/cookies.txt'
 
-intro='> 本系列持续更新中，欢迎关注。:clap:
->
-> 原文仓库：<https://github.com/wi1dcard/laravel-deployment>
+intro='> :clap: 本系列持续更新中，欢迎关注：**<https://github.com/wi1dcard/laravel-deployment>**。
 
 > 由于课程上下文关联比较紧密，在开始前请先阅读 [本文](https://learnku.com/articles/24914)。
+
+> **你的支持是我写作的动力；关注我的客官们，请在右上角点个赞，将会让文章在首页展示，帮助更多人。**
+
+> 感谢 :clap: ！
 
 <!--more-->
 '
