@@ -1,4 +1,4 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash -eu
 
 local_cookies='/Projects/learnku-deploy-bot/build/cookies.txt'
 
@@ -15,9 +15,13 @@ intro='> :clap: 本系列持续更新中，欢迎关注：**<https://github.com/
 
 leads='轻松部署 Laravel 应用 | '
 
+index=1
 deploy() {
-    while read file
+    while true
     do
+        file=$(echo "$1" | sed -n "${index}p")
+        [ ! -z "$file" ] || exit 0
+        index=$(($index+1))
         echo
 
         title="$(echo "$file" | sed -E 's/.+\/(.+)\..+/\1/')"
@@ -29,13 +33,18 @@ deploy() {
         contents="$(sed -E 's/^# .+$//' "$file")"
         title="${leads}《${title}》"
 
-        echo "Updating: $title"
-        echo "${intro} ${contents}" \
-            | learnku-deploy-bot article:update -k "$cookies" \
+        temp_file=$(mktemp)
+        echo "${intro} ${contents}" > "$temp_file"
+
+        echo "Deploying: $title"
+        learnku-deploy-bot article:update \
+                -k "$cookies" \
                 -t "$token" \
                 -i "$id" \
-                -l "$title"
+                -l "$title" \
+                $temp_file
 
+        rm -f $temp_file
     done
 }
 
@@ -49,4 +58,6 @@ echo "Generated CSRF token: $token"
 articles=$(learnku-deploy-bot article:list -k "$cookies")
 echo -e "Fetched articles: \n$articles"
 
-find $(realpath $(dirname $0)/../src/) -name "*.md" | sort | deploy
+files=$(find $(realpath $(dirname $0)/../src/) -name "*.md" | sort)
+
+deploy "$files"
