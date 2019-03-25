@@ -42,9 +42,9 @@
 
 预期大纲：
 
-- [*] 常见一键 Web 面板
-- [*] 常见一键配置脚本
-- [*] 手动安装 Git、Nginx、Composer、PHP、PHP-FPM
+- [x] 常见一键 Web 面板
+- [x] 常见一键配置脚本
+- [x] 手动安装 Git、Nginx、Composer、PHP、PHP-FPM
 - [ ] Envoy
 - [ ] Deployer
 - [ ] Ansible
