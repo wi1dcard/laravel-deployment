@@ -35,16 +35,21 @@
 2. 配置运行环境
 3. 部署应用代码
 
+以及可选项：
+
+4. 更新应用
+5. 回滚应用
+
 预期大纲：
 
-- 常见一键 Web 面板
-- 常见一键配置脚本
-- 手动安装 Git、Nginx、Composer、PHP、PHP-FPM
-- Envoy
-- Deployer
-- Ansible
-- Terraform
-- Lexicon
+- [*] 常见一键 Web 面板
+- [*] 常见一键配置脚本
+- [*] 手动安装 Git、Nginx、Composer、PHP、PHP-FPM
+- [ ] Envoy
+- [ ] Deployer
+- [ ] Ansible
+- [ ] Terraform
+- [ ] Lexicon
 - ...
 
 ## 目录结构
