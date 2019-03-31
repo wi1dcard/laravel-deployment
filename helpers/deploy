@@ -42,6 +42,7 @@ deploy() {
                 -t "$token" \
                 -i "$id" \
                 -l "$title" \
+                --tag "轻松部署 Laravel 应用" \
                 $temp_file
 
         rm -f $temp_file
