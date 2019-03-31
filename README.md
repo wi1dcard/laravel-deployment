@@ -5,9 +5,9 @@
 
 ## 如何阅读
 
-可查看 [我的博客](https://learnku.com/blog/wi1dcard)，亦可阅读 [源代码](https://github.com/wi1dcard/laravel-deployment/tree/master/src)，配合 [Octotree](https://github.com/ovity/octotree) 插件能够显示目录，获得较好的阅读体验：
-
-![](https://github.com/wi1dcard/laravel-deployment/raw/master/src/images/1a8dc8c46498f35e52a46553ed1ea342.png)
+- [LearnKu](https://learnku.com/blog/Wi1dcard/tags/easy-deployment-of-laravel-applications_50034)
+- [GitHub](https://github.com/wi1dcard/laravel-deployment/tree/master/src)，配合 [Octotree](https://github.com/ovity/octotree) 插件能够显示目录，获得较好的阅读体验：
+    ![](https://github.com/wi1dcard/laravel-deployment/raw/master/src/images/1a8dc8c46498f35e52a46553ed1ea342.png)
 
 ## 简介
 
