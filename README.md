@@ -89,6 +89,15 @@ $ laravel new hello-deployment
 
 在本课程中，如无特殊说明，将采用 `Ubuntu Bionic 18.04 LTS` 作为服务器系统。
 
+## 番外
+
+- [你需要哪些云服务基础设施？](https://wi1dcard.cn/posts/cloud-infrastructures/)
+- [浅析 Laravel 文档推荐的 Nginx 配置](https://wi1dcard.cn/posts/laravel-recommended-nginx-conf-analysis/)
+- [我如何实现 Laravel-China 全自动系列文章发布](https://wi1dcard.cn/posts/automatic-learnku-deploy-bot/)
+- 配置 Sudoer（待编写）
+- 为 Nginx 站点部署 HTTPS（待编写）
+- CI/CD 集成（待编写）
+
 ## 其它
 
 常见注意事项如下：
