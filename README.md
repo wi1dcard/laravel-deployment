@@ -94,9 +94,9 @@ $ laravel new hello-deployment
 常见注意事项如下：
 
 - 更新节奏不固定，业余时间写作。暂时计划 1-2 天每篇。
-- 本课程将不再赘述云服务购买等 **基础且具备商业支持** 的步骤，如有疑问可参考 [本文](https://wi1dcard.cn/posts/cloud-infrastructures)。
-- 在开始学习前，请先了解一些基本概念，例如「什么是 Linux」、「Nginx 是干嘛的」。
-- 对于 MySQL、Redis、ElasticSearch 等组件的安装与调优不在本课程的大纲范围内，建议使用现成的云服务。
+- 本课程将不再赘述云服务购买等 **基础且具备商业支持** 的步骤。
+- 在开始学习前，请先了解一些基本概念，例如「什么是 Linux」、「Nginx 的作用」。
+- 对于 MySQL、Redis、ElasticSearch 等组件的安装与调优不在本课程的大纲范围内。
 
 ## 贡献
 
