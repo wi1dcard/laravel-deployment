@@ -25,12 +25,10 @@ install:
   - composer global require wi1dcard/learnku-deploy-bot:dev-master
 
 before_script:
-  # Tests
   - helpers/lint
-  - learnku-deploy-bot
 
 script:
-  - exit 0
+  - helpers/deploy
 
 notifications:
   email:
